@@ -24,7 +24,7 @@ public class JvmForceGcAgent
 		String os = System.getProperty("os.name");
 		if(os.contains("windows") || os.contains("Windows"))
 			os = "win";
-		if(os.contains("linux"))
+		if(os.contains("linux") || os.contains("Linux"))
 			os = "tux";
 
 		try

@@ -32,9 +32,9 @@ gcc -shared -Wall -D_JNI_IMPLEMENTATION_ -Wl,--kill-at -I"%JAVA_HOME%/include" -
 ### Linux x86-64
 ```
 cc -shared -Wall -fpic -I$JAVA_HOME/include/ -I$JAVA_HOME/include/linux/ \
- -o out/jvmforcegcagent-tux64.so \
+ -o out/libjvmforcegcagent-tux64.so \
  src/jvmforcegcagent/main/native/jvmforcegcagent.c \
- && strip out/jvmforcegcagent-tux64.so
+ && strip out/libjvmforcegcagent-tux64.so
 ```
 
 ## Running
@@ -50,7 +50,7 @@ cc -shared -Wall -fpic -I$JAVA_HOME/include/ -I$JAVA_HOME/include/linux/ \
 
 ### Linux x86-64
 ```
- java -agentpath:jvmforcegcagent/out/jvmforcegcagent-tux64.so -Djava.library.path=jvmforcegcagent/out/ -cp jvmforcegcagent/out/* com.example.YourApp
+ java -agentpath:jvmforcegcagent/out/libjvmforcegcagent-tux64.so -Djava.library.path=jvmforcegcagent/out/ -cp jvmforcegcagent/out/* com.example.YourApp
 ```
 
 ## Usage
